@@ -1,9 +1,12 @@
 
 import 'package:bitto/colors.dart';
 import 'package:bitto/widgets/search.dart';
-import 'package:flutter/gestures.dart';
+import 'package:bitto/widgets/translation_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../widgets/web/search_buttons.dart';
+import '../widgets/web/web_footer.dart';
 
 class WebScreenLayout extends StatelessWidget {
   const WebScreenLayout({Key? key}) : super(key: key);
@@ -49,29 +52,12 @@ class WebScreenLayout extends StatelessWidget {
               children: [
                 Search(),
                 SizedBox(height: 20,),
-                SizedBox(
-                  width: size.width*0.5,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "Search Google or type a URL",
-
-                      hintStyle: const TextStyle(
-                        color: primaryColor,
-                        fontWeight: FontWeight.w400,
-                      ),
-                      prefixIcon: const Icon(Icons.search, color: primaryColor),
-                      suffixIcon: Padding(padding: const EdgeInsets.all(6),child: SvgPicture.asset('assets/mic-icon.svg',),),
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50),
-                        borderSide: BorderSide.none,
-
-                      ),
-                    ),
-                  ),
-                )
+                SearchButtons(),
+                SizedBox(height: 20,),
+                TranslationButtons(),
               ]
-            ))
+            )),
+            const WebFooter(),
           ],
         ),
       ),
