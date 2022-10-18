@@ -12,7 +12,7 @@ class SearchFooter extends StatelessWidget {
       children: [
         Container(
           color: footerColor,
-          padding: const EdgeInsets.symmetric(horizontal:150, vertical: 15),
+          padding:  EdgeInsets.symmetric(horizontal:size.width<768?10:150, vertical: 15),
         child:Row(
           children:[
             Text('Uzbekistan', style: TextStyle(color: Colors.grey[700], fontSize: 15),),
@@ -33,7 +33,7 @@ class SearchFooter extends StatelessWidget {
         const Divider(thickness: 0, height: 9, color: Colors.black26),
         Container(
           color: footerColor,
-          padding: const EdgeInsets.symmetric(horizontal:150, vertical: 15),
+          padding:  EdgeInsets.symmetric(horizontal:size.width<768?10:150, vertical: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [

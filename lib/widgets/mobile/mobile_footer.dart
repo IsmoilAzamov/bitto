@@ -7,7 +7,7 @@ class MobileFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      children: [
+      children: const [
         FooterText(title: 'About'),
         SizedBox(width: 10),
         FooterText(title: 'Advertising'),

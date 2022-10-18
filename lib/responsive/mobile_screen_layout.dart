@@ -2,12 +2,9 @@
 import 'package:bitto/colors.dart';
 import 'package:bitto/widgets/mobile/mobile_footer.dart';
 import 'package:bitto/widgets/search.dart';
-import 'package:bitto/widgets/translation_buttons.dart';
-import 'package:bitto/widgets/web/search_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../widgets/web/web_footer.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -56,12 +53,10 @@ class MobileScreenLayout extends StatelessWidget {
             ),
             Expanded(child: Column(
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Search(),
                   SizedBox(height: 20,),
-                  SearchButtons(),
-                  SizedBox(height: 20,),
-                  TranslationButtons(),
+
                 ]
             )),
             const MobileFooter(),

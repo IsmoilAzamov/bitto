@@ -1,5 +1,4 @@
 import 'package:bitto/colors.dart';
-import 'package:bitto/pages/search_screen.dart';
 import 'package:bitto/responsive/mobile_screen_layout.dart';
 import 'package:bitto/responsive/responsive_layout_screen.dart';
 import 'package:bitto/responsive/web_screen_layout.dart';
@@ -21,7 +20,10 @@ scaffoldBackgroundColor: backgroundColor,
       ),
       debugShowCheckedModeBanner: false,
       title: "Bitto",
-      home: SearchScreen(),
+      home:  const ResponsiveLayoutScreen(
+        mobileScreenLayout: MobileScreenLayout(),
+        webScreenLayout: WebScreenLayout(),
+      ),
     );
   }
 }

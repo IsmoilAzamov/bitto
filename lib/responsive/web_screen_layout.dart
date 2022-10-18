@@ -49,7 +49,7 @@ class WebScreenLayout extends StatelessWidget {
             ),
             Expanded(child: Column(
              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Search(),
                 SizedBox(height: 20,),
                 SearchButtons(),

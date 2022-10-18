@@ -1,5 +1,5 @@
 
-import 'package:bitto/colors.dart';
+import 'package:bitto/pages/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,10 +17,16 @@ class Search extends StatelessWidget {
       Center(
         child: Image.asset('assets/google-logo.png', height: size.height*0.12,),
       ),
-      SizedBox(height: 20,),
+      const SizedBox(height: 20,),
       SizedBox(
         width: size.width>1024? size.width*0.4: size.width>768?size.width*0.6: size.width*0.8,
         child: TextFormField(
+          onFieldSubmitted: (query){
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context)=>SearchScreen(searchQuery: query, start: "0",))
+            );
+
+          },
           decoration: InputDecoration(
             hintText: "Search Google or type a URL",
 

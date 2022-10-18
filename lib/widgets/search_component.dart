@@ -53,6 +53,8 @@ class _SearchResultComponentState extends State<SearchResultComponent> {
                         widget.text,
                         style: TextStyle(
                             color: blueColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
                             decoration: _showUnderline ? TextDecoration.underline : TextDecoration.none),
                       ),
                     ]))),
@@ -60,7 +62,8 @@ class _SearchResultComponentState extends State<SearchResultComponent> {
             color: primaryColor,
             fontSize: 14,
 
-        ),)
+        ),),
+        const SizedBox(height: 20,),
       ],
     );
   }
